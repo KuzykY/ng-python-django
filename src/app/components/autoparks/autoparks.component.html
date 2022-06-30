@@ -1,7 +1,5 @@
 <div *ngFor="let autopark of autoparks">
   {{autopark.id}}.) <a routerLink="{{autopark.id}}" [state]="autopark"> {{autopark.name}}</a>
   <button (click)="delete(autopark.id)">delete</button>
-<!--  <button (click)="showCars(autopark.id)">ShowCars</button>-->
-  <router-outlet></router-outlet>
 </div>
 

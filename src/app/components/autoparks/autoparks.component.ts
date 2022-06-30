@@ -26,11 +26,4 @@ export class AutoparksComponent implements OnInit {
     })
   }
 
-  // showCars(id: string) {this.activatedRoute.params.subscribe(({id}) => {
-  //     this.autoparkService.getCarsById('1').subscribe((autopark) => {
-  //       this.autopark = autopark
-  //     })
-  //   })
-  //
-  // }
 }

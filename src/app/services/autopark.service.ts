@@ -21,8 +21,8 @@ export class AutoparkService {
     deleteById(id: string): Observable<void> {
     return this.httpClient.delete<void>(`${urls.autopark}/${id}`)
   }
-   getCarsById(id: string): Observable<ICar> {
-    return this.httpClient.get<ICar>(`${urls.cars}?autoParkId=${id}`)
+   getCarsById(id: string): Observable<ICar[]> {
+    return this.httpClient.get<ICar[]>(`${urls.cars}?autoParkId=${id}`)
   }
 
 }

@@ -11,7 +11,7 @@ import {ICar} from "../../models/car.interface";
 })
 export class AutoparksdetailsComponent implements OnInit {
   autopark: IAutopark
-  car:ICar
+  cars:ICar[]
 
   constructor(private autoparkService: AutoparkService, private activatedRoute: ActivatedRoute) {
   }
@@ -26,8 +26,8 @@ export class AutoparksdetailsComponent implements OnInit {
 
   showCars(id: string) {
     this.activatedRoute.params.subscribe(({id}) => {
-      this.autoparkService.getCarsById(id).subscribe((car) => {
-        this.car = car
+      this.autoparkService.getCarsById(id).subscribe((cars) => {
+        this.cars = cars
       })
     })
 

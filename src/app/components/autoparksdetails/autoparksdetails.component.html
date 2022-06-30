@@ -1,4 +1,10 @@
 <div *ngIf="autopark">
 {{autopark.id}}.) {{autopark.name}}</div>
+
 <button (click)="showCars(autopark.id)">ShowCars</button>
+
+<div *ngIf="cars">
+  <app-car *ngFor="let car of cars" [car]="car"></app-car>
+</div>
+
 
